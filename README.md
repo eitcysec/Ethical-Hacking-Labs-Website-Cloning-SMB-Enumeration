@@ -130,13 +130,19 @@ smbclient //172.17.0.2/tmp
 
 <img width="848" height="419" alt="image" src="https://github.com/user-attachments/assets/9bfa7b6f-9aad-44ca-9564-c1085ca93f94" />
 
+Upload the badfile.txt to the target server using the put command. The syntax for the command is:
+put local-file-name remote-file-name
+
+<img width="850" height="418" alt="image" src="https://github.com/user-attachments/assets/9d7cb27e-5cdc-492e-8aa8-7b926d1aa8df" />
+
+
 
 **What Enum4Linux Enumerates**
-SMB shares
-User accounts
-Groups
-OS information
-Password policy
+SMB shares,
+User accounts.
+Groups,
+OS information,
+Password policy,
 
 
 
