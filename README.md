@@ -73,7 +73,70 @@ Capture submitted credentials
 <img width="952" height="419" alt="image" src="https://github.com/user-attachments/assets/31d22001-2cd6-469f-855a-36b73bf6b2c9" />
 
 
+PART 2: SMB Vulnerability Scanning (Enum4Linux)
+🔧 Lab Setup
+Attacker: Kali Linux
+Target: Metasploitable2
 
+Step-by-Step Procedure
+1️) Scan the subnet to check for live hosts that have SMB protocol running
+Command: nmap -sN 172.17.0.0/24
+
+<img width="932" height="416" alt="image" src="https://github.com/user-attachments/assets/b11d8c0c-486a-4ab6-81b5-a9606c430e88" />
+
+
+2️) Basic Enum4Linux Scan
+enum4linux -U to get get userlist
+
+<img width="946" height="386" alt="image" src="https://github.com/user-attachments/assets/cce266dc-9709-4520-a8b5-aaef07c51b15" />
+
+<img width="931" height="419" alt="image" src="https://github.com/user-attachments/assets/5c9cfc48-b35a-4a6b-9a0f-423628249d51" />
+
+<img width="929" height="419" alt="image" src="https://github.com/user-attachments/assets/eab1f18a-8095-4d6b-810e-959302833226" />
+
+
+3️) Detailed Enumeration
+enum4linux -M  172.17.0.2      get machine list*
+<img width="939" height="413" alt="image" src="https://github.com/user-attachments/assets/7aa5f3ee-63df-4ce0-a7dc-a0b6ab0e7a8f" />
+
+
+-S get a list of file shares
+
+<img width="731" height="411" alt="image" src="https://github.com/user-attachments/assets/17f4a5fa-16fc-4ef5-8621-1ffb7d17a89c" />
+
+<img width="688" height="424" alt="image" src="https://github.com/user-attachments/assets/70b60bb9-b6f2-4c33-8e94-0adf0d246c33" />
+
+-G get a list of the groups and their members
+
+<img width="868" height="260" alt="image" src="https://github.com/user-attachments/assets/6c1ff901-f9a3-4d57-9f97-85a6df3409e6" />
+
+-P list the password policies
+
+<img width="802" height="419" alt="image" src="https://github.com/user-attachments/assets/91d1b8e7-0481-4593-ac43-1363c34c2e1e" />
+
+-i get a list of printers
+
+<img width="852" height="376" alt="image" src="https://github.com/user-attachments/assets/dea8ce43-4e32-40c3-a270-26eea342239d" />
+
+**The smbclient -L command to list the shares on the target host. **
+Command: smbclient -L //172.17.0.2/
+
+<img width="920" height="358" alt="image" src="https://github.com/user-attachments/assets/f356acd9-7dad-471b-8022-eaae3b933187" />
+
+**Connect to the tmp share using the smbclient command by specifying the share name and IP address.
+**
+
+smbclient //172.17.0.2/tmp
+
+<img width="848" height="419" alt="image" src="https://github.com/user-attachments/assets/9bfa7b6f-9aad-44ca-9564-c1085ca93f94" />
+
+
+**What Enum4Linux Enumerates**
+SMB shares
+User accounts
+Groups
+OS information
+Password policy
 
 
 
