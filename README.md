@@ -45,25 +45,35 @@ sudo  setoolkit
 6️⃣ Enter Attacker IP
 ifconfig
 
+<img width="932" height="433" alt="image" src="https://github.com/user-attachments/assets/0065107a-fe12-4885-a00a-3e4f9dbd12fc" />
 
-Use your Kali IP (e.g. 192.168.56.101)
+Use your Kali IP (e.g. 192.168.56.101) In this lab we are using the br-internal adapter which has IP 10.6.6.1
+
+<img width="944" height="419" alt="image" src="https://github.com/user-attachments/assets/2dd4dc77-ed39-487a-9b20-22afd59ec24f" />
+
 
 7️⃣ Enter Target URL
 
-Example:
+We will be using the in-bult website http://dvwa.vm
 
-http:
-//testphp.vulnweb.com
+<img width="948" height="419" alt="image" src="https://github.com/user-attachments/assets/f93ba419-59bc-42ed-a8ba-b8f120b5fe17" />
+
 
 
 
 SETOOLKIT will:
-
 Clone the website
-
 Host it locally
 
+<img width="475" height="391" alt="image" src="https://github.com/user-attachments/assets/e6e2a481-52cb-4c45-86f2-5f7afdd2bcc0" />
+
+
 Capture submitted credentials
+
+<img width="952" height="419" alt="image" src="https://github.com/user-attachments/assets/31d22001-2cd6-469f-855a-36b73bf6b2c9" />
+
+
+
 
 
 
